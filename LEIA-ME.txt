@@ -1,5 +1,10 @@
-Bio Site PWA — Junior Dias
-Envie todos os arquivos e a pasta icons para a raiz de uma hospedagem HTTPS (por exemplo Firebase Hosting ou GitHub Pages). O arquivo inicial deve ser index.html.
-O botão Instalar cartão digital solicita a instalação quando o navegador permite, ou apresenta instruções para adicionar à tela inicial. Em iPhones, use o Safari e o menu Compartilhar. A instalação nunca é automática.
-Os ícones JD são provisórios e podem ser substituídos por sua foto, mantendo os mesmos nomes e tamanhos. Foto e vídeo externos precisam de internet.
-Grave a URL pública no NFC, não o arquivo HTML.
+BIO SITE JUNIOR DIAS — PWA COM NOVIDADES
+
+1. Envie TODOS os arquivos e a pasta icons para uma hospedagem HTTPS (Firebase Hosting ou GitHub Pages).
+2. Grave no NFC a URL pública do index.html (preferencialmente a raiz do site).
+3. Para publicar uma novidade, edite novidades.json, adicionando um item com id NOVO e único, title, message, date e url opcional. Envie o arquivo atualizado à hospedagem. A novidade aparece no sino na próxima visita, ao retornar ao app ou ao recarregar a página.
+4. Quando a pessoa abre o painel de novidades, elas são marcadas como lidas nesse dispositivo.
+5. O indicador no ícone do sistema depende de suporte à Badging API e pode não aparecer; o ponto vermelho dentro do site funciona nos navegadores modernos com JavaScript.
+6. Para publicar nova versão do app, altere a constante CACHE no service-worker.js (ex.: junior-bio-v3), publique os arquivos e atualize a página. O aviso de nova versão aparecerá quando o navegador detectar o service worker atualizado.
+7. NÃO há push remoto com o app fechado. Para isso, é preciso configurar consentimento, inscrição push, backend e serviço como Firebase Cloud Messaging; a função não está incluída neste pacote.
+8. O ícone JD é provisório. Vídeo do YouTube e links externos exigem internet. O download de vCard pode variar por navegador.

@@ -1,91 +1,12 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#11143a">
-  <meta name="description" content="Cartão de visitas digital de Junior Dias. Entre em contato e conheça meus canais.">
-  <title>Junior Dias | Cartão Digital</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
-  <link rel="apple-touch-icon" href="./icons/icon-192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Junior Dias">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{color-scheme:dark;--white:#fff;--muted:#d7d8f2;--line:rgba(255,255,255,.20)}
-    *{box-sizing:border-box}html{min-height:100%;background:#11143a}body{margin:0;min-height:100vh;font-family:Outfit,system-ui,-apple-system,sans-serif;color:var(--white);background:radial-gradient(circle at 13% 8%,#8c38ed 0%,transparent 35%),radial-gradient(circle at 90% 23%,#ff3d96 0%,transparent 32%),radial-gradient(circle at 45% 95%,#1671ff 0%,transparent 50%),linear-gradient(150deg,#15103f,#251457 55%,#101e57);background-attachment:fixed}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 65% 60%,rgba(255,255,255,.09),transparent 45%)}
-    .wrap{position:relative;width:min(100% - 32px,440px);margin:0 auto;padding:42px 0 38px;text-align:center}
-    .avatar{display:block;width:132px;height:132px;object-fit:cover;border-radius:50%;border:5px solid rgba(255,255,255,.9);box-shadow:0 12px 45px rgba(8,8,43,.38),0 0 0 8px rgba(255,255,255,.13);margin:0 auto 21px}
-    h1{font-size:clamp(30px,8vw,39px);letter-spacing:.075em;margin:0;font-weight:800;line-height:1.2;text-shadow:0 3px 16px rgba(0,0,0,.14)}
-    .subtitle{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:9px 0 27px;font-weight:500}
-    .video{border:1px solid rgba(255,255,255,.25);padding:7px;border-radius:21px;background:rgba(255,255,255,.13);box-shadow:0 14px 32px rgba(0,0,0,.18);backdrop-filter:blur(12px);margin-bottom:25px}
-    .video iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#09091b}
-    .buttons{display:grid;gap:13px}.btn{display:flex;align-items:center;justify-content:center;min-height:62px;position:relative;border-radius:19px;padding:14px 50px;text-decoration:none;font-size:17px;font-weight:700;color:white;border:1px solid rgba(255,255,255,.22);box-shadow:0 8px 20px rgba(11,12,44,.19);transition:transform .2s,filter .2s,box-shadow .2s;cursor:pointer;font-family:inherit}
-    .btn:hover{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 12px 24px rgba(11,12,44,.27)}.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}.btn svg{position:absolute;left:20px;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-    .whatsapp{background:linear-gradient(110deg,#13bc72,#05a94e)}.contact{background:linear-gradient(110deg,#4d8bff,#6253ee)}.website{background:linear-gradient(110deg,#ff914d,#f24b83)}.instagram{background:linear-gradient(110deg,#8a42df,#e44292,#ff8756)}
-    .install{background:linear-gradient(110deg,#12c4db,#3567f5)}.install[hidden]{display:none}.install-note{font-size:13px;color:#e8e9ff;line-height:1.5;margin:12px 3px 0}.install-note[hidden]{display:none}.foot{font-size:12px;color:rgba(255,255,255,.75);margin-top:27px;letter-spacing:.06em}
-    @media(max-width:380px){.wrap{width:min(100% - 26px,440px);padding-top:30px}.avatar{width:112px;height:112px}.btn{min-height:58px}}
-    @media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <img class="avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrhBjonA4wDYd4oZKY2II0FG62Gq7dBHeSTVHhpcfepHUNkfA96elOroafvz_U22ARCMXOrM4IyDyomcrvAqenezV5_ys7zPCnZkpppMtPVQ7aAeuX5t-ZxL21yDGBsELKYU_Gkf_TCQ7H3_HjJNagOY5mXzErAxNd1Q1I8wbQPEV0DD2l6GpIwXpUTRBv/s320/foto.jpg" alt="Foto de perfil de Junior Dias" width="132" height="132">
-    <h1>JUNIOR DIAS</h1>
-    <p class="subtitle">Cartão de visitas digital</p>
-    <section class="video" aria-label="Vídeo de apresentação do YouTube">
-      <iframe src="https://www.youtube-nocookie.com/embed/1A9jo8zP2Tg?start=3935" title="Vídeo de Junior Dias no YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
-    <nav class="buttons" aria-label="Meus contatos e redes sociais">
-      <a class="btn whatsapp" href="https://wa.me/5569984835944" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3 20.5l1.4-5.1a8.5 8.5 0 1 1 16.1-3.8Z"/><path d="M8.5 8.5c.4-.4.7-.4 1-.1l1.1 1.5-.5 1.1c.6 1.2 1.6 2.2 2.9 2.8l1.1-.6 1.5 1c.4.3.3.7-.1 1.1-.8.8-1.8.9-3 .4a9.2 9.2 0 0 1-4.3-4.2c-.5-1.2-.4-2.2.3-3Z"/></svg>WhatsApp</a>
-      <a class="btn contact" id="saveContact" href="#" download="Junior-Dias.vcf"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M7.5 17c.5-2.1 2-3.2 4.5-3.2s4 1.1 4.5 3.2"/></svg>Salvar contato</a>
-      <a class="btn website" href="https://www.zyroweb.com.br" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18"/></svg>Meu site</a>
-      <a class="btn instagram" href="https://www.instagram.com/junior.dias_music" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/></svg>Instagram</a>
-      <button class="btn install" id="installBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></svg>Instalar cartão digital</button>
-    </nav>
-    <p class="install-note" id="installNote" hidden role="status"></p>
-    <footer class="foot">Conecte-se comigo</footer>
-  </main>
-  <script>
-    const vcard = ['BEGIN:VCARD','VERSION:3.0','N:Dias;Junior;;;','FN:Junior Dias','TEL;TYPE=CELL:+5569984835944','URL:https://www.zyroweb.com.br','X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/junior.dias_music','END:VCARD'].join('\r\n')+'\r\n';
-    const contactLink = document.getElementById('saveContact');
-    contactLink.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-    if ('serviceWorker' in navigator && location.protocol === 'https:') {
-      window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
-    }
-    let deferredPrompt;
-    const installBtn = document.getElementById('installBtn');
-    const installNote = document.getElementById('installNote');
-    const standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-    if (standalone) installBtn.hidden = true;
-    window.addEventListener('beforeinstallprompt', event => {
-      event.preventDefault();
-      deferredPrompt = event;
-    });
-    window.addEventListener('appinstalled', () => {
-      installBtn.hidden = true;
-      installNote.hidden = false;
-      installNote.textContent = 'Cartão digital instalado!';
-      deferredPrompt = null;
-    });
-    installBtn.addEventListener('click', async () => {
-      if (deferredPrompt) {
-        const promptEvent = deferredPrompt;
-        deferredPrompt = null;
-        await promptEvent.prompt();
-        return;
-      }
-      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const isSafari = /Safari/.test(navigator.userAgent) && !/CriOS|FxiOS|EdgiOS/.test(navigator.userAgent);
-      installNote.hidden = false;
-      installNote.textContent = isiOS
-        ? (isSafari ? 'No Safari, toque em Compartilhar e depois em Adicionar à Tela de Início.' : 'Abra esta página no Safari, toque em Compartilhar e escolha Adicionar à Tela de Início.')
-        : 'Abra o menu do navegador e escolha Instalar aplicativo ou Adicionar à tela inicial, caso disponível.';
-    });
-  </script>
-</body>
-</html>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#21134d"><meta name="description" content="Cartão digital de Junior Dias"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/icon-192.png"><link rel="apple-touch-icon" href="./icons/icon-192.png"><title>Junior Dias | Cartão Digital</title><style>
+:root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 18% 5%,#9b37e4 0,transparent 32%),radial-gradient(circle at 90% 40%,#0969e8 0,transparent 40%),linear-gradient(145deg,#180c35,#261057 55%,#0a1743);color:white;padding:28px 15px 55px}button,a{font:inherit}.wrap{max-width:450px;margin:auto}.top{display:flex;justify-content:flex-end;position:relative}.bell{position:relative;background:#ffffff25;color:white;border:1px solid #ffffff40;border-radius:50%;width:48px;height:48px;cursor:pointer;font-size:22px}.dot{position:absolute;right:8px;top:7px;width:11px;height:11px;border-radius:50%;background:#ff385b;border:2px solid white;display:none}.dot.on{display:block}.card{padding:16px 20px 25px;text-align:center;background:#ffffff16;border:1px solid #ffffff30;box-shadow:0 20px 60px #09002065;backdrop-filter:blur(18px);border-radius:28px}.avatar{width:126px;height:126px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 0 0 5px #c74bff80;margin:5px auto 12px;display:block}h1{font-size:29px;letter-spacing:1px;margin:0 0 5px}small{color:#d9d5f8}.video{aspect-ratio:16/9;width:100%;border:0;border-radius:15px;margin:22px 0 12px;background:#000}.links{display:grid;gap:11px}.link{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 12px;border:1px solid #ffffff45;border-radius:15px;color:white;text-decoration:none;font-weight:750;background:linear-gradient(110deg,#a12bea,#4668fa);box-shadow:0 6px 16px #0b002750;cursor:pointer}.link:nth-child(2){background:linear-gradient(110deg,#17a76a,#14b8a6)}.link:nth-child(3){background:linear-gradient(110deg,#185de2,#4c7dff)}.link:nth-child(4){background:linear-gradient(110deg,#d52b84,#ff6849)}.link.install{background:linear-gradient(110deg,#ff7e2d,#ff3e88)}.notice{background:#fff;color:#271447;border-radius:17px;padding:16px;margin:14px 0;text-align:left;box-shadow:0 12px 30px #0003}.notice h2{font-size:17px;margin:0 0 8px}.notice p{font-size:14px;line-height:1.5;margin:0 0 8px}.notice time{font-size:12px;color:#675c7d}.notice button{background:#4d35ca;color:white;border:0;padding:10px 14px;border-radius:10px;cursor:pointer}.hidden{display:none!important}.panel{margin:10px 0 18px}.panelTitle{display:flex;align-items:center;justify-content:space-between}.panelTitle button{background:none;color:white;border:0;font-size:24px;cursor:pointer}.status{text-align:center;margin:15px 0 0;color:#ddd3fa;font-size:12px}.banner{background:#fef3c7;color:#633c00;padding:13px;border-radius:14px;margin:12px 0;font-size:14px}.banner button{border:0;border-radius:8px;padding:8px;background:#633c00;color:white;margin-top:8px}.muted{opacity:.8}footer{text-align:center;margin:18px 0;font-size:12px;color:#ddd3fa}@media(prefers-reduced-motion:no-preference){.link{transition:transform .2s}.link:hover{transform:translateY(-2px)}}
+</style></head><body><main class="wrap"><div class="top"><button class="bell" id="bell" aria-label="Abrir novidades" aria-expanded="false">♧<span id="dot" class="dot"></span></button></div><section id="panel" class="panel hidden" aria-label="Central de novidades"><div class="panelTitle"><h2>🔔 Novidades</h2><button id="close" aria-label="Fechar">×</button></div><div id="news"></div></section><div id="updateBanner" class="banner hidden">Uma nova versão do cartão digital está disponível.<br><button id="updateNow">Atualizar agora</button></div><section class="card"><img class="avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrhBjonA4wDYd4oZKY2II0FG62Gq7dBHeSTVHhpcfepHUNkfA96elOroafvz_U22ARCMXOrM4IyDyomcrvAqenezV5_ys7zPCnZkpppMtPVQ7aAeuX5t-ZxL21yDGBsELKYU_Gkf_TCQ7H3_HjJNagOY5mXzErAxNd1Q1I8wbQPEV0DD2l6GpIwXpUTRBv/s320/foto.jpg" alt="Foto de perfil de Junior Dias"><h1>JUNIOR DIAS</h1><small>Cartão de visitas digital</small><iframe class="video" src="https://www.youtube-nocookie.com/embed/1A9jo8zP2Tg?start=3935" title="Vídeo de Junior Dias no YouTube" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe><nav class="links" aria-label="Contatos"><a class="link" href="https://wa.me/5569984835944" target="_blank" rel="noopener">💬 WhatsApp</a><button class="link" id="contact">👤 Salvar contato</button><a class="link" href="https://www.zyroweb.com.br" target="_blank" rel="noopener">🌐 Meu site</a><a class="link" href="https://www.instagram.com/junior.dias_music" target="_blank" rel="noopener">📸 Instagram</a><button class="link install" id="install">⬇ Instalar cartão digital</button></nav></section><p id="installHelp" class="status hidden"></p><footer>Junior Dias • Cartão Digital NFC</footer></main><script>
+const $=id=>document.getElementById(id);let deferredPrompt=null,reg=null;const seenKey='junior-dias-seen-news-v1';const lastSeen=()=>{try{return JSON.parse(localStorage.getItem(seenKey)||'[]')}catch{return []}};let currentNews=[];
+function refreshBadge(){const unread=currentNews.filter(n=>!lastSeen().includes(n.id)).length;$('dot').classList.toggle('on',unread>0);if('setAppBadge'in navigator){if(unread)navigator.setAppBadge(unread).catch(()=>{});else navigator.clearAppBadge().catch(()=>{})}}
+function showNews(){const seen=lastSeen();$('news').replaceChildren();if(!currentNews.length){let p=document.createElement('p');p.textContent='Nenhuma novidade publicada.';$('news').append(p)}currentNews.forEach(n=>{let box=document.createElement('article');box.className='notice';let title=document.createElement('h2');title.textContent=n.title+(seen.includes(n.id)?'':' • Novo');let desc=document.createElement('p');desc.textContent=n.message;let date=document.createElement('time');date.textContent=n.date||'';box.append(title,desc,date);if(n.url&&/^https:\/\//.test(n.url)){let a=document.createElement('a');a.href=n.url;a.target='_blank';a.rel='noopener';a.textContent='Saiba mais';a.style.display='block';box.append(a)}$('news').append(box)});localStorage.setItem(seenKey,JSON.stringify([...new Set([...seen,...currentNews.map(n=>n.id)])]));refreshBadge()}
+$('bell').addEventListener('click',()=>{const opening=$('panel').classList.contains('hidden');$('panel').classList.toggle('hidden',!opening);$('bell').setAttribute('aria-expanded',String(opening));if(opening)showNews()});$('close').addEventListener('click',()=>{$('panel').classList.add('hidden');$('bell').setAttribute('aria-expanded','false')});
+async function checkNews(){try{const r=await fetch('./novidades.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('Sem conexão');const data=await r.json();currentNews=Array.isArray(data.items)?data.items.filter(n=>typeof n.id==='string'&&typeof n.title==='string'&&typeof n.message==='string'):[];refreshBadge();if(!$('panel').classList.contains('hidden'))showNews()}catch(e){console.info('Novidades indisponíveis temporariamente',e)}}checkNews();document.addEventListener('visibilitychange',()=>{if(!document.hidden){checkNews();reg?.update().catch(()=>{})}});
+$('contact').addEventListener('click',()=>{const v='BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Junior Dias\r\nN:Dias;Junior;;;\r\nTEL;TYPE=CELL:+5569984835944\r\nURL:https://www.zyroweb.com.br\r\nEND:VCARD\r\n';const u=URL.createObjectURL(new Blob([v],{type:'text/vcard;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='junior-dias.vcf';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),10000)});
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=$('install').disabled?null:e});window.addEventListener('appinstalled',()=>{$('installHelp').textContent='Cartão digital instalado!';$('installHelp').classList.remove('hidden');deferredPrompt=null});$('install').addEventListener('click',async()=>{if(deferredPrompt){const p=deferredPrompt;deferredPrompt=null;await p.prompt();return}const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);$('installHelp').textContent=ios?'No Safari: toque em Compartilhar e depois em “Adicionar à Tela de Início”.':'No menu do navegador, procure “Instalar aplicativo” ou “Adicionar à tela inicial”. A instalação depende do navegador e do HTTPS.';$('installHelp').classList.remove('hidden')});
+if('serviceWorker'in navigator){window.addEventListener('load',async()=>{try{reg=await navigator.serviceWorker.register('./service-worker.js');reg.addEventListener('updatefound',()=>{const worker=reg.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller)$('updateBanner').classList.remove('hidden')})});if(reg.waiting&&navigator.serviceWorker.controller)$('updateBanner').classList.remove('hidden')}catch(e){console.warn('Service worker não registrado',e)}});let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!refreshing){refreshing=true;location.reload()}})}$('updateNow').addEventListener('click',()=>{if(reg?.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'});else location.reload()});
+</script></body></html>
