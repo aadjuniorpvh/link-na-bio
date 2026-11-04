@@ -6,6 +6,11 @@
   <meta name="theme-color" content="#11143a">
   <meta name="description" content="Cartão de visitas digital de Junior Dias. Entre em contato e conheça meus canais.">
   <title>Junior Dias | Cartão Digital</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Junior Dias">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +27,7 @@
     .buttons{display:grid;gap:13px}.btn{display:flex;align-items:center;justify-content:center;min-height:62px;position:relative;border-radius:19px;padding:14px 50px;text-decoration:none;font-size:17px;font-weight:700;color:white;border:1px solid rgba(255,255,255,.22);box-shadow:0 8px 20px rgba(11,12,44,.19);transition:transform .2s,filter .2s,box-shadow .2s;cursor:pointer;font-family:inherit}
     .btn:hover{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 12px 24px rgba(11,12,44,.27)}.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}.btn svg{position:absolute;left:20px;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .whatsapp{background:linear-gradient(110deg,#13bc72,#05a94e)}.contact{background:linear-gradient(110deg,#4d8bff,#6253ee)}.website{background:linear-gradient(110deg,#ff914d,#f24b83)}.instagram{background:linear-gradient(110deg,#8a42df,#e44292,#ff8756)}
-    .foot{font-size:12px;color:rgba(255,255,255,.75);margin-top:27px;letter-spacing:.06em}
+    .install{background:linear-gradient(110deg,#12c4db,#3567f5)}.install[hidden]{display:none}.install-note{font-size:13px;color:#e8e9ff;line-height:1.5;margin:12px 3px 0}.install-note[hidden]{display:none}.foot{font-size:12px;color:rgba(255,255,255,.75);margin-top:27px;letter-spacing:.06em}
     @media(max-width:380px){.wrap{width:min(100% - 26px,440px);padding-top:30px}.avatar{width:112px;height:112px}.btn{min-height:58px}}
     @media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
   </style>
@@ -40,13 +45,47 @@
       <a class="btn contact" id="saveContact" href="#" download="Junior-Dias.vcf"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M7.5 17c.5-2.1 2-3.2 4.5-3.2s4 1.1 4.5 3.2"/></svg>Salvar contato</a>
       <a class="btn website" href="https://www.zyroweb.com.br" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 5-5 13 0 18M12 3c5 5 5 13 0 18"/></svg>Meu site</a>
       <a class="btn instagram" href="https://www.instagram.com/junior.dias_music" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/></svg>Instagram</a>
+      <button class="btn install" id="installBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></svg>Instalar cartão digital</button>
     </nav>
+    <p class="install-note" id="installNote" hidden role="status"></p>
     <footer class="foot">Conecte-se comigo</footer>
   </main>
   <script>
     const vcard = ['BEGIN:VCARD','VERSION:3.0','N:Dias;Junior;;;','FN:Junior Dias','TEL;TYPE=CELL:+5569984835944','URL:https://www.zyroweb.com.br','X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/junior.dias_music','END:VCARD'].join('\r\n')+'\r\n';
     const contactLink = document.getElementById('saveContact');
     contactLink.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
+    }
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+    const installNote = document.getElementById('installNote');
+    const standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    if (standalone) installBtn.hidden = true;
+    window.addEventListener('beforeinstallprompt', event => {
+      event.preventDefault();
+      deferredPrompt = event;
+    });
+    window.addEventListener('appinstalled', () => {
+      installBtn.hidden = true;
+      installNote.hidden = false;
+      installNote.textContent = 'Cartão digital instalado!';
+      deferredPrompt = null;
+    });
+    installBtn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        const promptEvent = deferredPrompt;
+        deferredPrompt = null;
+        await promptEvent.prompt();
+        return;
+      }
+      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isSafari = /Safari/.test(navigator.userAgent) && !/CriOS|FxiOS|EdgiOS/.test(navigator.userAgent);
+      installNote.hidden = false;
+      installNote.textContent = isiOS
+        ? (isSafari ? 'No Safari, toque em Compartilhar e depois em Adicionar à Tela de Início.' : 'Abra esta página no Safari, toque em Compartilhar e escolha Adicionar à Tela de Início.')
+        : 'Abra o menu do navegador e escolha Instalar aplicativo ou Adicionar à tela inicial, caso disponível.';
+    });
   </script>
 </body>
 </html>

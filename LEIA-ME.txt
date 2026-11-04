@@ -1,0 +1,5 @@
+Bio Site PWA — Junior Dias
+Envie todos os arquivos e a pasta icons para a raiz de uma hospedagem HTTPS (por exemplo Firebase Hosting ou GitHub Pages). O arquivo inicial deve ser index.html.
+O botão Instalar cartão digital solicita a instalação quando o navegador permite, ou apresenta instruções para adicionar à tela inicial. Em iPhones, use o Safari e o menu Compartilhar. A instalação nunca é automática.
+Os ícones JD são provisórios e podem ser substituídos por sua foto, mantendo os mesmos nomes e tamanhos. Foto e vídeo externos precisam de internet.
+Grave a URL pública no NFC, não o arquivo HTML.
